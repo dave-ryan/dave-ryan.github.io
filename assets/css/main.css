@@ -1,85 +1,211 @@
+:root {
+  --teal: rgb(51, 115, 125);
+  --teal-soft: rgba(51, 115, 125, 0.12);
+  --ink: #1c2a2e;
+  --muted: #4d5c61;
+  --paper: #ffffff;
+  --wash: #f3f7f8;
+  --line: rgba(28, 42, 46, 0.08);
+  --max: 1080px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: sans-serif;
+  margin: 0;
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  line-height: 1.5;
+  background: var(--paper);
 }
 
-a:link {
-  color: rgb(51, 115, 125);
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--teal);
   text-decoration: none;
 }
-a:visited {
-  color: rgb(51, 115, 125);
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-a:active {
+
+a:hover,
+a:focus-visible {
   text-decoration: underline;
 }
 
-.me {
-  background-image: url(../images/me.jpeg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: contain;
+a:focus-visible,
+.skip-link:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
 }
 
-.standout {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -3rem;
+  z-index: 10;
+  padding: 0.5rem 0.75rem;
+  background: var(--paper);
+  border-radius: 8px;
 }
 
-.container {
-  height: 100vh;
+.skip-link:focus {
+  top: 0.75rem;
 }
 
-.left-list {
-  height: 10rem;
-  list-style-type: none;
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 32rem) minmax(16rem, 28rem);
+  justify-content: center;
+  align-items: center;
+  gap: 2rem 3rem;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 3.5rem;
 }
 
-.right-container {
-  max-width: 8rem;
+.eyebrow {
+  margin: 0 0 0.35rem;
+  font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, monospace;
+  font-size: 1.15rem;
 }
 
-.right-list {
-  height: 10rem;
-  overflow: auto;
-  list-style-type: none;
-  padding-left: 2px;
-  max-width: 8rem;
-
-  --mask: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 1) 0,
-      rgba(0, 0, 0, 1) 40%,
-      rgba(0, 0, 0, 0) 95%,
-      rgba(0, 0, 0, 0) 0
-    )
-    100% 50% / 100% 100% repeat-x;
-
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
 }
 
-.right-list::-webkit-scrollbar {
-  width: 6px;
+.lede {
+  margin: 0 0 1.5rem;
+  max-width: 36rem;
+  color: var(--muted);
+  font-size: 1.05rem;
 }
 
-.right-list::-webkit-scrollbar-track {
-  background-color: transparent;
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.1rem;
+  margin-bottom: 1.5rem;
 }
 
-.right-list::-webkit-scrollbar-thumb {
-  background-color: #d6dee1;
-  border-radius: 20px;
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.right-list::-webkit-scrollbar-thumb:hover {
-  background-color: #969595;
+.skills li {
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background: var(--teal-soft);
+  color: var(--teal);
+  font-size: 0.9rem;
 }
 
-.no-hover:hover {
-  cursor: default;
+.portrait {
+  display: block;
+  width: 100%;
+  max-width: 34rem;
+  margin-inline: auto;
+  object-fit: contain;
+}
+
+.projects {
+  background: var(--wash);
+  padding: 3.5rem 1.5rem 4rem;
+}
+
+.projects-personal {
+  background: var(--paper);
+}
+
+.section-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.65rem;
+  letter-spacing: -0.02em;
+}
+
+.section-lede {
+  margin: 0 0 1.75rem;
+  max-width: 40rem;
+  color: var(--muted);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  padding: 1.25rem 1.35rem 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper);
+}
+
+.projects-personal .card {
+  background: var(--wash);
+}
+
+h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.card p + p {
+  margin-top: 0.85rem;
+}
+
+code {
+  font-size: 0.92em;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding-top: 2.5rem;
+    gap: 1.75rem;
+  }
+
+  .portrait {
+    order: -1;
+    max-width: 18rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

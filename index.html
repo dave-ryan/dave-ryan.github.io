@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>David Ryan's portfolio</title>
+    <title>Dave Ryan — Full-stack engineer</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=yes"
     />
+    <meta
+      name="description"
+      content="Dave Ryan is a full-stack engineer. Selected work, personal projects, and ways to get in touch."
+    />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -30,277 +33,174 @@
   </head>
 
   <body>
-    <div class="container text-center me">
-      <div class="fixed-top fs-3 font-monospace standout">Hi, I'm Dave.</div>
-      <div class="row align-items-center h-100">
-        <div class="col p-0">
-          <ul class="left-list standout">
-            <li>
-              <a href="mailto:daveryan145@gmail.com">daveryan145@gmail.com</a>
-            </li>
-            <li>
-              <a href="./assets/files/David Ryan's Resume.pdf" target="_blank"
-                >Resume</a
-              >
-            </li>
-            <li>
-              <a href="https://github.com/dave-ryan" target="_blank"
-                >Personal Github</a
-              >
-            </li>
-            <li>
-              <a href="https://github.com/dryanperkspot" target="_blank"
-                >Professional Github</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/davidryan600/"
-                target="_blank"
-                >LinkedIn</a
-              >
-            </li>
-            <button
-              type="button"
-              class="btn btn-secondary btn-sm mt-3"
-              data-bs-toggle="modal"
-              data-bs-target="#hobbyModal"
-            >
-              Hobby Projects
-            </button>
-          </ul>
-        </div>
-        <div class="col p-0 d-none d-sm-block"></div>
-        <div class="col no-hover p-0">
-          <div class="standout mx-auto right-container">
-            <ul class="right-list">
-              <li>React.js</li>
-              <li>Vue.js</li>
-              <li>Ruby</li>
-              <li>Rails</li>
-              <li>Javascript</li>
-              <li>SQL</li>
-              <li>Bootstrap</li>
-              <li>JQuery</li>
-              <li>C#</li>
-              <li>.NET</li>
-              <li>Azure</li>
-              <li>Azure Devops</li>
-              <li>Knockout.js</li>
-              <li>Excel</li>
-              <li>Git</li>
-              <li>Jmeter</li>
-              <li>Powershell</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>etc</li>
-            </ul>
+    <a class="skip-link" href="#projects">Skip to projects</a>
+
+    <header class="hero">
+      <div class="intro">
+        <p class="eyebrow">Hi, I'm Dave.</p>
+        <h1>Full-stack engineer</h1>
+        <p class="lede">
+          I build web products with React, Rails, and .NET — payments, admin
+          tools, and the systems that keep them reliable.
+        </p>
+
+        <nav class="contact" aria-label="Contact">
+          <a href="mailto:daveryan145@gmail.com">Email</a>
+          <a
+            href="./assets/files/David Ryan's Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Resume</a
+          >
+          <a
+            href="https://github.com/dave-ryan"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://github.com/dryanperkspot"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Work GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/davidryan600/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+        </nav>
+
+        <ul class="skills">
+          <li>React</li>
+          <li>Vue</li>
+          <li>Ruby on Rails</li>
+          <li>JavaScript</li>
+          <li>C# / .NET</li>
+          <li>SQL</li>
+          <li>Azure</li>
+        </ul>
+      </div>
+
+      <img
+        class="portrait"
+        src="./assets/images/me.jpeg"
+        alt="Illustrated portrait of Dave Ryan surrounded by programming language logos"
+        width="800"
+        height="1000"
+      />
+    </header>
+
+    <main id="projects">
+      <section class="projects" aria-labelledby="work-heading">
+        <div class="section-inner">
+          <h2 id="work-heading">Selected work</h2>
+          <p class="section-lede">
+            Product engineering on a live consumer site — the details are
+            internal, the problems are the interesting part.
+          </p>
+
+          <div class="project-grid">
+            <article class="card">
+              <h3>Secure admin file transfer</h3>
+              <p>
+                Designed and shipped a file-transfer flow for admin users:
+                new roles, a dedicated display, and a modal for cleansing,
+                verifying, and editing CSV data before it goes out.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Wallet checkout</h3>
+              <p>
+                Added PayPal, Google Pay, and Apple Pay so people could buy
+                with more than a credit card.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Card-linked restaurant rewards</h3>
+              <p>
+                Set up a way for users to link a credit card and earn points
+                when they spend at local restaurants, using a third-party
+                network that recognizes those purchases. Included an
+                interactive, maps-style view of participating locations.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Redis cache</h3>
+              <p>
+                Fleshed out an existing Redis cache so it was more robust and
+                easier to extend later.
+              </p>
+            </article>
           </div>
         </div>
-      </div>
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="hobbyModal"
-        tabindex="-1"
-        aria-labelledby="hobbyModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-body">
-              <div class="accordion" id="accordionHobby">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="false"
-                      aria-controls="collapseOne"
-                    >
-                      Installing Ruby on Rails on Windows
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingOne"
-                    data-bs-parent="#accordionHobby"
-                  >
-                    <div class="accordion-body">
-                      The coding bootcamp I attended (<a
-                        href="https://anyonecanlearntocode.com/"
-                        target="_blank"
-                        >Actualize</a
-                      >) taught full stack web development, focusing on Ruby on
-                      Rails for backend and Vue.js for frontend. Most of my
-                      hobby projects are written using this stack. Ruby and its
-                      support system is very friendly with Mac architecture, but
-                      not so friendly with Windows. I learned how to use a
-                      Macbook during my time at Actualize, since I had only
-                      known Windows machines since I was a kid. After
-                      graduation, I had to deal with some technical difficulties
-                      getting set up on my own laptop, so I wrote this guide for
-                      myself and shared it with other Actualize grads.
-                      <br /><br />
-                      <a
-                        href="./blogs/installing-rails-on-windows.html"
-                        target="_blank"
-                        >Installing Rails on Windows</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                    >
-                      Secret Santa
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseTwo"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionHobby"
-                  >
-                    <div class="accordion-body">
-                      This is the "Secret Santa" website I built for my extended
-                      family. Each year we had an issue where people had bought
-                      the same gift for the same person, and there would be
-                      returns. We also had to send our Christmas list to
-                      everyone in the family individually. With these problems
-                      in mind, I made a website to solve them. Everyone's list
-                      is up on the site for everyone to view, so there's no
-                      miscommunication. Then when you decide to make a purchase,
-                      everyone (but the person you're buying for) will see that
-                      someone bought that gift.
-                      <br /><br />
-                      Let me know if you'd like a demo.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingThree">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseThree"
-                      aria-expanded="false"
-                      aria-controls="collapseThree"
-                    >
-                      Find New Releases
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseThree"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingThree"
-                    data-bs-parent="#accordionHobby"
-                  >
-                    <div class="accordion-body">
-                      I have a very large digital collection of music, it's
-                      another hobby of mine to listen to as much new music as I
-                      can. I still have my favorites, but with all the albums
-                      releasing (and life in general), it's hard to know what's
-                      new. This lets you search for individual artists to find
-                      all their major LP releases, and filter for a certain
-                      year. You can also upload a <code>.csv</code> file of your
-                      collection and it will show which albums you're missing.
-                      <br /><br />
-                      <a
-                        href="https://find-new-releases.netlify.app/"
-                        target="_blank"
-                        >Find New Releases</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFour">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFour"
-                      aria-expanded="false"
-                      aria-controls="collapseFour"
-                    >
-                      Playgroup Tutor
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseFour"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingFour"
-                    data-bs-parent="#accordionHobby"
-                  >
-                    <div class="accordion-body">
-                      This was my capstone project for my coding bootcamp. One
-                      of my hobbies is playing the trading card game Magic: The
-                      Gathering. Within "Magic", there are a large number of
-                      ways to play. Depending on which way you play, you might
-                      not be equipped to play against someone else who also
-                      plays Magic but in a different "format". I built this site
-                      as a demonstration of a social Facebook-style site for
-                      users to display which formats they play, and find
-                      like-minded players in their area. You can search by zip
-                      code distance, add friends, send each other messages, and
-                      customize your profile with your favorite card.
-                      <br /><br />
-                      Let me know if you'd like a demo.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingFive">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFive"
-                      aria-expanded="false"
-                      aria-controls="collapseFive"
-                    >
-                      Don Ryan's Fine Art
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseFive"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="headingFive"
-                    data-bs-parent="#accordionHobby"
-                  >
-                    <div class="accordion-body">
-                      My Dad is a retired painter, and this is the site I built
-                      for him. It's got some samples of his work and a way to
-                      contact him. His magnum opus is the "Hometown Veterans"
-                      collection. Local veterans of all ages and backgrounds
-                      volunteered to sit down and have their portraits taken. In
-                      a variety of mediums, his work was displayed at the
-                      Palette and Chisel in Chicago, IL on Veteran's Day
-                      2023.<br /><br />
-                      <a href="https://www.donryansfineart.com/" target="_blank"
-                        >Don Ryan's Fine Art</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      </section>
+
+      <section class="projects projects-personal" aria-labelledby="personal-heading">
+        <div class="section-inner">
+          <h2 id="personal-heading">Personal projects</h2>
+          <p class="section-lede">Sites and tools I built for family, music, and practice.</p>
+
+          <div class="project-grid">
+            <article class="card">
+              <h3>Find New Releases</h3>
+              <p>
+                I listen to a lot of new music and still lose track of albums.
+                Search an artist’s major LPs, filter by year, or upload a
+                <code>.csv</code> of your collection to see what you’re missing.
+              </p>
+              <p>
+                <a
+                  href="https://find-new-releases.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >find-new-releases.netlify.app</a
+                >
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Don Ryan’s Fine Art</h3>
+              <p>
+                A site for my dad, a retired painter: selected work and a way
+                to reach him. His Hometown Veterans portraits were shown at the
+                Palette and Chisel in Chicago on Veterans Day 2023.
+              </p>
+              <p>
+                <a
+                  href="https://www.donryansfineart.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >donryansfineart.com</a
+                >
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Secret Santa</h3>
+              <p>
+                A family gift-exchange site. Everyone’s list lives in one place,
+                and when someone claims a gift the rest of the group can see it
+                — except the person it’s for. Happy to walk through a demo.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Playgroup Tutor</h3>
+              <p>
+                Bootcamp capstone: a Facebook-style site for Magic: The
+                Gathering players to list formats, find people nearby by zip
+                code, add friends, and message each other. Happy to walk
+                through a demo.
+              </p>
+            </article>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   </body>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
 </html>
